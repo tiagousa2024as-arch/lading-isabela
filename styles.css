@@ -161,7 +161,7 @@ h1, h2, h3, h4, p { margin: 0; }
   align-items: center;
   justify-content: space-between;
 }
-/* Logo — Isabela Guimarães */
+/* Logo — Isabela Magalhães */
 .logo {
   display: flex;
   align-items: center;
@@ -330,6 +330,9 @@ h1, h2, h3, h4, p { margin: 0; }
   opacity: 0;
   animation: fadeUp 0.8s ease 0.3s forwards;
 }
+.hero__support:has(+ .hero__support) {
+  margin-bottom: var(--space-sm);
+}
 .hero__cta {
   margin-bottom: var(--space-md);
   opacity: 0;
@@ -353,6 +356,8 @@ h1, h2, h3, h4, p { margin: 0; }
   position: relative;
   width: 100%;
   max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero__portrait-frame {
   position: relative;
@@ -366,6 +371,8 @@ h1, h2, h3, h4, p { margin: 0; }
   aspect-ratio: 3/4;
   background: var(--charcoal);
   background-image: linear-gradient(135deg, var(--gray-900) 0%, var(--black) 100%);
+  background-position: center center;
+  background-size: cover;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -491,6 +498,11 @@ h1, h2, h3, h4, p { margin: 0; }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: var(--space-3xl);
+  list-style: none;
+}
+.stats-grid--checks {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 960px;
 }
 .stat-card {
   background: var(--white);
@@ -504,6 +516,24 @@ h1, h2, h3, h4, p { margin: 0; }
 .stat-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
+}
+.stat-card--check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: left;
+}
+.stat-card__check {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 1.125rem;
+  line-height: 1;
+}
+.stat-card--check .stat-card__label {
+  font-size: 0.9375rem;
+  text-transform: none;
+  color: var(--gray-700);
+  line-height: 1.4;
 }
 .stat-card__number {
   display: block;
@@ -541,7 +571,11 @@ h1, h2, h3, h4, p { margin: 0; }
   box-shadow: var(--shadow-card);
   border: 1px solid var(--cream);
 }
-.profile-block__media { position: relative; }
+.profile-block__media {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
 .profile-block__img-wrap {
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -549,10 +583,13 @@ h1, h2, h3, h4, p { margin: 0; }
   box-shadow: var(--shadow-soft);
 }
 .profile-block__img {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 3/4;
+  object-fit: cover;
   background: linear-gradient(180deg, var(--cream) 0%, var(--ivory-warm) 100%);
 }
-/* Add photo: .profile-block__img { background-image: url('foto-advogada.jpg'); background-size: cover; background-position: center; } */
 .profile-block__divider {
   width: 48px;
   height: 2px;
@@ -567,6 +604,10 @@ h1, h2, h3, h4, p { margin: 0; }
   margin-bottom: var(--space-md);
 }
 .profile-block__bio:last-child { margin-bottom: 0; }
+
+.profile-block__formation {
+  margin-top: var(--space-2xl);
+}
 
 @media (max-width: 768px) {
   .profile-block { grid-template-columns: 1fr; }
@@ -767,16 +808,28 @@ h1, h2, h3, h4, p { margin: 0; }
   gap: var(--space-2xl);
   margin-bottom: var(--space-2xl);
 }
+.footer__name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0 0 var(--space-2xs);
+}
 .footer__area {
   font-size: 0.875rem;
+  color: var(--gold);
+  margin: 0 0 var(--space-2xs);
+}
+.footer__topics {
+  font-size: 0.875rem;
   color: var(--gray-500);
-  margin-top: var(--space-xs);
-  margin-bottom: var(--space-2xs);
+  margin: 0 0 var(--space-2xs);
 }
 .footer__oab {
   font-size: 0.8125rem;
   color: var(--gold);
   letter-spacing: 0.05em;
+  margin: 0;
 }
 .footer__contact-label {
   font-size: 0.75rem;
