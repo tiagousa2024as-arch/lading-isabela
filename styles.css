@@ -172,6 +172,14 @@ h1, h2, h3, h4, p { margin: 0; }
   letter-spacing: 0.02em;
   color: var(--white);
 }
+.logo__text {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  white-space: nowrap;
+}
 .logo__img {
   height: 44px;
   width: auto;
@@ -581,6 +589,23 @@ h1, h2, h3, h4, p { margin: 0; }
   overflow: hidden;
   border: 1px solid var(--cream);
   box-shadow: var(--shadow-soft);
+}
+.profile-block__avatar {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, var(--cream) 0%, var(--ivory-warm) 40%, var(--gold-muted) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-block__avatar-initials {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-900);
 }
 .profile-block__img {
   display: block;
