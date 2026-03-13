@@ -2,13 +2,13 @@ IMAGENS DA PÁGINA DE VENDAS
 ===========================
 
 Para a LOGO aparecer no site:
-  1. Copie o arquivo da logo (Isabela Guimarães, dourado no fundo escuro).
+  1. Copie o arquivo da logo (Isabela Magalhães, dourado no fundo escuro).
   2. Cole NESTA pasta (images).
   3. RENOMEIE o arquivo para:  logo.png
 
 O arquivo deve ficar em:  pensao-alimenticia-landing/images/logo.png
 
-Se a logo não estiver aqui, o site mostra o texto "Isabela Guimarães" no lugar.
+Se a logo não estiver aqui, o site mostra o texto "Isabela Magalhães" no lugar.
 
 Fotos da advogada (na raiz do projeto):
   1. 577787799_25096871573336364_183851638869425181_n.jpg — foto no banco (corpo inteiro) → exibida primeiro, no topo (hero).
